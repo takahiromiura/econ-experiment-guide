@@ -1,0 +1,17 @@
+# Quarto の出力とキャッシュ
+/_site/
+/.quarto/
+**/*.quarto_ipynb
+
+# インタビューの記録。別の非公開のレポジトリ (econ-experiment-guide-records) で管理する
+/records/
+
+# 一時ファイル
+temp/
+tmp/
+
+# エディタ
+.vscode/
+
+# claude
+.claude/

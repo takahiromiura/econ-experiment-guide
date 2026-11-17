@@ -1,0 +1,34 @@
+project:
+  type: website
+  # 本文は .qmd だけを変換する。records/・CLAUDE.md などの .md はサイトに出さない
+  render:
+    - "*.qmd"
+
+website:
+  title: "経済実験の進め方"
+  navbar:
+    left:
+      - href: index.qmd
+        text: ホーム
+      - href: design/index.qmd
+        text: 設計
+      - href: implementation/index.qmd
+        text: 実施
+      - href: analysis/index.qmd
+        text: 分析
+      - href: sample.qmd
+        text: 見本
+
+lang: ja
+bibliography: references.bib
+csl: chicago-author-date.csl
+# 引用を「Fehr and Schmidt (1999)」の形にするため、引用の処理だけ英語の表記で通す (_filters/cite-en.lua)
+citeproc: false
+filters:
+  - quarto
+  - _filters/cite-en.lua
+
+format:
+  html:
+    theme: cosmo
+    toc: true
